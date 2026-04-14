@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "c0e93257-5e9a-4154-bec5-4d56d8c891f4",
+      "name": "Meghansh Kashyap",
+      "email": "meghanshkashyap1813@gmail.com",
+      "password": "$2a$10$vRe.oiVsHART9CNgWprCwu97gptNBa8MZELoZgleS6RdRsaZLyFqq",
+      "role": "student",
+      "createdAt": "2026-04-14T10:28:14.914Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "1cfd946d-68b1-4147-92fc-04d3e68bb6ad",
+      "title": "Wifi Issue ",
+      "description": "Low Internet Speed Across the campus",
+      "category": "it_support",
+      "priority": "medium",
+      "status": "open",
+      "createdAt": "2026-04-14T10:38:12.152Z",
+      "createdBy": "c0e93257-5e9a-4154-bec5-4d56d8c891f4",
+      "createdByName": "Meghansh Kashyap",
+      "comments": []
+    }
+  ],
+  "announcements": [
+    {
+      "id": "a1",
+      "title": "Welcome to Smart Campus",
+      "content": "Use this portal to report issues and track campus service requests.",
+      "createdAt": "2026-04-14T09:00:00.000Z",
+      "authorName": "Campus Admin"
+    }
+  ]
+}
