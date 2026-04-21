@@ -6,8 +6,19 @@ export default function LoginPage({ setUser, isAuthenticated }) {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [loginType, setLoginType] = useState("student"); // student | admin
 
   if (isAuthenticated) return <Navigate to="/dashboard" replace />;
+
+  const applyLoginType = (type) => {
+    setLoginType(type);
+    setError("");
+    if (type === "admin") {
+      setForm({ email: "admin@campus.local", password: "Admin@123" });
+    } else {
+      setForm({ email: "", password: "" });
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,6 +46,42 @@ export default function LoginPage({ setUser, isAuthenticated }) {
         <section className="auth-card card login-card">
           <h2>Welcome back</h2>
           <p className="muted">Login to continue to your service dashboard.</p>
+
+          <div className="login-type-row">
+            <label className="field-label">
+              Login as
+              <select
+                value={loginType}
+                onChange={(e) => applyLoginType(e.target.value)}
+              >
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+            <div className="login-type-hint">
+              {loginType === "admin" ? (
+                <p className="muted">
+                  Admin demo credentials are auto-filled for you.
+                </p>
+              ) : (
+                <p className="muted">
+                  Use your registered student email and password.
+                </p>
+              )}
+            </div>
+          </div>
+
+          {loginType === "admin" && (
+            <div className="demo-credentials">
+              <p className="muted">
+                Admin: <strong>admin@campus.local</strong> / <strong>Admin@123</strong>
+              </p>
+              <button type="button" className="btn-secondary" onClick={() => applyLoginType("admin")}>
+                Re-fill Admin Credentials
+              </button>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit}>
             <label className="field-label">
               Email Address

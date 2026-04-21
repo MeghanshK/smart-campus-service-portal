@@ -7,6 +7,14 @@
       "password": "$2a$10$vRe.oiVsHART9CNgWprCwu97gptNBa8MZELoZgleS6RdRsaZLyFqq",
       "role": "student",
       "createdAt": "2026-04-14T10:28:14.914Z"
+    },
+    {
+      "id": "c99bc191-4fb6-4605-a5c3-4ace9bec69a1",
+      "name": "Campus Admin",
+      "email": "admin@campus.local",
+      "password": "$2a$10$9MmaRzDnwduWVtJ1JWJkN.BhezRKeVSjK4TTkSRauzR.3Yv81LALa",
+      "role": "admin",
+      "createdAt": "2026-04-21T15:20:11.238Z"
     }
   ],
   "tickets": [
@@ -20,7 +28,48 @@
       "createdAt": "2026-04-14T10:38:12.152Z",
       "createdBy": "c0e93257-5e9a-4154-bec5-4d56d8c891f4",
       "createdByName": "Meghansh Kashyap",
-      "comments": []
+      "comments": [],
+      "assignedTo": "Campus Admin",
+      "assignedToId": "c99bc191-4fb6-4605-a5c3-4ace9bec69a1",
+      "statusHistory": [
+        {
+          "id": "fb0b0572-4f73-4e07-ad30-4b285631dcc3",
+          "from": null,
+          "to": "open",
+          "by": "Meghansh Kashyap",
+          "at": "2026-04-14T10:38:12.152Z"
+        }
+      ],
+      "dueAt": "2026-04-16T10:38:12.152Z",
+      "lastActivityAt": "2026-04-21T15:29:17.139Z",
+      "updatedAt": "2026-04-21T15:29:17.139Z",
+      "attachments": []
+    },
+    {
+      "id": "728a0af3-d289-4aa7-8fe5-38a3b2b5a77d",
+      "title": "kkklklk",
+      "description": "kokl",
+      "category": "maintenance",
+      "priority": "medium",
+      "status": "open",
+      "createdAt": "2026-04-15T06:01:49.216Z",
+      "createdBy": "c0e93257-5e9a-4154-bec5-4d56d8c891f4",
+      "createdByName": "Meghansh Kashyap",
+      "comments": [],
+      "assignedTo": null,
+      "assignedToId": null,
+      "statusHistory": [
+        {
+          "id": "24dec1d6-b469-4fa0-b5d0-4daf06ae6215",
+          "from": null,
+          "to": "open",
+          "by": "Meghansh Kashyap",
+          "at": "2026-04-15T06:01:49.216Z"
+        }
+      ],
+      "dueAt": "2026-04-17T06:01:49.216Z",
+      "lastActivityAt": "2026-04-15T06:01:49.216Z",
+      "attachments": []
     }
   ],
   "announcements": [
